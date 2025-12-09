@@ -1,4 +1,4 @@
-# Kartavya.ai Internship Intelligence System
+# Kartavya.ai Internship Analysis
 
 ## 📋 Overview
 The **Kartavya.ai Internship Intelligence System** is a specialized market analysis tool built to automate the collection of internship data across India. It aggregates real-time listings from **LinkedIn**, **Internshala**, and **Unstop** to provide actionable hiring insights.
@@ -29,3 +29,64 @@ This system uses a **"Hybrid Scraping Engine"** to bypass modern anti-bot protec
 
 ```bash
 pip install selenium requests beautifulsoup4 fpdf webdriver-manager
+````
+
+## ▶️ Usage Instructions
+
+### Step 1: Run the Intelligence System
+
+This script collects data, analyzes it, and generates the reports.
+
+```bash
+python main.py
+```
+
+  * **What to expect:**
+      * You will see logs in the terminal as it fetches data from LinkedIn.
+      * A **Chrome window** will open for Internshala/Unstop. **DO NOT CLOSE IT.** Let it scroll and collect data automatically.
+      * Once finished, two files will be generated: `Kartavya_Final_Data_[Date].csv` and `Kartavya_Insights_Report.pdf`.
+
+### Step 2: Upload to GitHub (Optional)
+
+This script creates a new repository for you and pushes your code/reports to the cloud.
+
+1.  Open `upload.py` and set your `GITHUB_TOKEN` and `GITHUB_USERNAME` at the top.
+2.  Run the upload script:
+
+<!-- end list -->
+
+```bash
+python upload.py
+```
+
+## 📂 Output Files
+
+| File Name | Description |
+| :--- | :--- |
+| `Kartavya_Final_Data_[DATE].csv` | Master dataset containing Title, Company, Platform, Stipend, and Apply Links. |
+| `Kartavya_Insights_Report.pdf` | Executive summary with market statistics, average stipend calculations, and hiring advice. |
+
+## 🔧 Troubleshooting
+
+**Q: LinkedIn shows "0 Listings"?**
+
+  * A: LinkedIn limits Guest API calls per IP address. If this happens, wait 10 minutes or switch to a different network (e.g., mobile hotspot).
+
+**Q: GitHub Upload says "Not Found"?**
+
+  * A: This means your Token is invalid or lacks permissions. Generate a **Classic Token** (not Fine-grained) and ensure the **`repo`** checkbox is ticked in GitHub Developer Settings.
+
+**Q: The Browser closes immediately?**
+
+  * A: This is normal if the scraping finishes quickly. If no data is saved, check your internet connection.
+
+## ⚖️ Disclaimer
+
+This tool is intended for **internal market research purposes only**.
+
+  * **Compliance:** The tool respects `robots.txt` policies and includes rate-limiting to be polite to host servers.
+  * **Data Usage:** Do not use scraped data for commercial resale or spamming.
+
+-----
+
+*Generated for Kartavya.ai Intern Acquisition Strategy*
