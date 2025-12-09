@@ -46,18 +46,6 @@ python main.py
       * A **Chrome window** will open for Internshala/Unstop. **DO NOT CLOSE IT.** Let it scroll and collect data automatically.
       * Once finished, two files will be generated: `Kartavya_Final_Data_[Date].csv` and `Kartavya_Insights_Report.pdf`.
 
-### Step 2: Upload to GitHub (Optional)
-
-This script creates a new repository for you and pushes your code/reports to the cloud.
-
-1.  Open `upload.py` and set your `GITHUB_TOKEN` and `GITHUB_USERNAME` at the top.
-2.  Run the upload script:
-
-<!-- end list -->
-
-```bash
-python upload.py
-```
 
 ## 📂 Output Files
 
